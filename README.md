@@ -1,6 +1,6 @@
 # Example Modules
 
-This are the example modules for the YOOtheme Pro. They demonstrate how to extend YOOtheme Pro with custom functionalities. For more information on how to create a custom module read the [modules and events](https://yootheme.com/support/yootheme-pro/joomla/modules-and-events.md) documentation.
+This are the example modules for the YOOtheme Pro. They demonstrate how to add asset files, builder elements and setting panels. For more information on how to create a custom module read the [modules and events](https://yootheme.com/support/yootheme-pro/joomla/modules-and-events.md) documentation.
 
 ## Quick Installation
 
