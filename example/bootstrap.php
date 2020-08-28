@@ -3,8 +3,8 @@
 use YOOtheme\Builder;
 use YOOtheme\Path;
 
-include_once __DIR__ . '/src/Assets.php';
-include_once __DIR__ . '/src/Settings.php';
+include_once __DIR__ . '/src/AssetsListener.php';
+include_once __DIR__ . '/src/SettingsListener.php';
 
 return [
 
@@ -12,12 +12,13 @@ return [
 
         // Add Asset Files
         'theme.head' => [
-            MyAssets::class => 'initHead',
+            AssetsListener::class => 'initHead',
+            SettingsListener::class => 'initHead',
         ],
 
         // Add Settings Panel
         'customizer.init' => [
-            MySettings::class => 'initCustomizer',
+            SettingsListener::class => 'initCustomizer',
         ]
 
     ],
