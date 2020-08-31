@@ -1,1 +1,1 @@
-document.body.insertAdjacentHTML('beforebegin', '<p>Script file</p>');
+document.body.insertAdjacentHTML('afterbegin', '<p>Script file</p>');
