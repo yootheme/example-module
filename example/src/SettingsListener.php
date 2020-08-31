@@ -35,14 +35,13 @@ class SettingsListener
         // Access theme config values through the `YOOtheme\Config` service
         $view->addLoader(function ($name, $parameters, callable $next) use ($config) {
 
-            $content = $next($name, $parameters);
-            $prefix = substr($name, -6) === 'header' ?
-                "<dl>
+            return "
+                <dl>
                     <dt>My Section Field</dt><dd>{$config->get('~theme.my-section-field')}</dd>
                     <dt>My Panel Field</dt><dd>{$config->get('~theme.my-panel-field')}</dd>
-                </dl>" : '';
-
-            return $prefix . $content;
+                </dl> 
+                {$next($name, $parameters)}
+            ";
 
         }, '~theme/templates/header');
     }
