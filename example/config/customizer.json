@@ -2,13 +2,12 @@
     "sections": {
         "mySection": {
             "title": "My Section",
-            "heading": false,
             "width": 500,
             "priority": 90,
             "fields": {
-                "my-section-field": {
-                    "label": "My Section Field",
-                    "description": "My Field's Description."
+                "option_a": {
+                    "label": "Option A",
+                    "description": "A description text."
                 }
             }
         }
