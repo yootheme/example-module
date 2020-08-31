@@ -16,7 +16,7 @@ return [
             SettingsListener::class => 'initHead',
         ],
 
-        // Add Settings Panel
+        // Add Setting Panels
         'customizer.init' => [
             SettingsListener::class => 'initCustomizer',
         ]

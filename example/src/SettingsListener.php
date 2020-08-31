@@ -8,10 +8,10 @@ class SettingsListener
 {
     public static function initCustomizer(Config $config)
     {
-        // Gets the registered panels for the customizer
+        // Get the registered panels for the customizer
         $config->get('customizer.panels');
 
-        // Adds a new panel called "My Panel" to the customizer
+        // Add a new panel called "My Panel" to the customizer
         $config->set('customizer.panels.my-panel', [
             'title'  => 'My Panel',
             'width'  => 400,
@@ -23,10 +23,10 @@ class SettingsListener
             ],
         ]);
 
-        // Adds the panel to the menu in the "settings" section
+        // Add the panel to the menu in the "settings" section
         $config->set('customizer.sections.settings.fields.settings.items.my-panel', 'My Panel');
 
-        // Adds a new section to the customizer through a json config file
+        // Add a new section to the customizer through a json config file
         $config->addFile('customizer', Path::get('../config/customizer.json'));
     }
 
