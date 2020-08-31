@@ -1,8 +1,8 @@
 <?php
 
 use YOOtheme\Config;
-use YOOtheme\Metadata;
 use YOOtheme\Path;
+use YOOtheme\View;
 
 class SettingsListener
 {
@@ -30,14 +30,20 @@ class SettingsListener
         $config->addFile('customizer', Path::get('../config/customizer.json'));
     }
 
-    public static function initHead(Config $config, Metadata $metadata)
+    public static function initHead(Config $config, View $view)
     {
         // Access theme config values through the `YOOtheme\Config` service
-        $metadata->set('script:my-settings', "document.addEventListener('DOMContentLoaded', function (event) {
-            document.body.insertAdjacentHTML('beforebegin', '<dl>'
-                + '<dt>My Section Field</dt><dd>{$config->get('~theme.my-section-field')}</dd>'
-                + '<dt>My Panel Field</dt><dd>{$config->get('~theme.my-panel-field')}</dd>'
-            + '</dl>');
-        })");
+        $view->addLoader(function ($name, $parameters, callable $next) use ($config) {
+
+            $content = $next($name, $parameters);
+            $prefix = substr($name, -6) === 'header' ?
+                "<dl>
+                    <dt>My Section Field</dt><dd>{$config->get('~theme.my-section-field')}</dd>
+                    <dt>My Panel Field</dt><dd>{$config->get('~theme.my-panel-field')}</dd>
+                </dl>" : '';
+
+            return $prefix . $content;
+
+        }, '~theme/templates/header');
     }
 }
