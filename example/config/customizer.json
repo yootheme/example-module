@@ -1,6 +1,6 @@
 {
     "sections": {
-        "mySection": {
+        "my_section": {
             "title": "My Section",
             "width": 500,
             "priority": 90,
