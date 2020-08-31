@@ -1,9 +1,9 @@
 {
     "sections": {
-        "my_section": {
+        "my-section": {
             "title": "My Section",
-            "width": 500,
-            "priority": 90,
+            "width": 400,
+            "priority": 100,
             "fields": {
                 "option_a": {
                     "label": "Option A",

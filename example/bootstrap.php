@@ -10,13 +10,12 @@ return [
 
     'events' => [
 
-        // Add Asset Files
+        // Add asset files
         'theme.head' => [
             AssetsListener::class => 'initHead',
-            SettingsListener::class => 'initHead',
         ],
 
-        // Add Setting Panels
+        // Add settings Panels
         'customizer.init' => [
             SettingsListener::class => 'initCustomizer',
         ]
