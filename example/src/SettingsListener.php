@@ -8,7 +8,7 @@ class SettingsListener
 {
     public static function initCustomizer(Config $config)
     {
-        // Add panel
+        // Add panel, as an example using a dynamic PHP configuration
         $config->set('customizer.panels.my-panel', [
             'title'  => 'My Panel',
             'width'  => 400,
@@ -21,7 +21,7 @@ class SettingsListener
         ]);
         $config->set('customizer.sections.settings.fields.settings.items.my-panel', 'My Panel');
 
-        // Add section
+        // Add section, as an example using a static JSON configuration
         $config->addFile('customizer', Path::get('../config/customizer.json'));
     }
 }
