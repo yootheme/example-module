@@ -4,6 +4,8 @@ This is the example module for the YOOtheme Pro. It demonstrates how to add asse
 
 ## Quick Installation
 
+The example modules can be added using a child-theme or a Joomla or WordPress plugin. The easiest way to quickly try it out is by using a child theme. 
+
 1. Create and activate a child theme in [Joomla](https://yootheme.com/support/yootheme-pro/joomla/developers-child-themes#create-a-child-theme) or [WordPress](https://yootheme.com/support/yootheme-pro/wordpress/developers-child-themes#create-a-child-theme) for YOOtheme Pro.
 2. [Download](https://github.com/yootheme/example-module/archive/master.zip) and unzip the example module.
 3. Create a `modules` directory in the child theme and copy the `example` directory into it.
