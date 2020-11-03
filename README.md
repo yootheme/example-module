@@ -1,6 +1,6 @@
 # Example Module
 
-This is the example module for the YOOtheme Pro. It demonstrates how to add asset files, builder elements and setting panels. For more information on how to create a custom module read the [modules](https://yootheme.com/support/yootheme-pro/joomla/developers-modules.md) documentation.
+This is the example module for the YOOtheme Pro. It demonstrates how to add asset files, builder elements and setting panels. For more information on how to create a custom module read the [modules](https://yootheme.com/support/yootheme-pro/joomla/developers-modules) documentation.
 
 ## Quick Installation
 
