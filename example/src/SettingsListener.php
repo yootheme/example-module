@@ -2,7 +2,6 @@
 
 use YOOtheme\Config;
 use YOOtheme\Path;
-use YOOtheme\View;
 
 class SettingsListener
 {
