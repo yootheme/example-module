@@ -10,6 +10,19 @@
                     "description": "A description text."
                 }
             }
+        },
+        "styler": {
+            "components": {
+                "custom": {
+                    "name": "Custom Component",
+                    "groups": {
+                        "title": "@custom-title-*",
+                        "content": "@custom-content-*"
+                    },
+                    "hover": ".uk-custom",
+                    "inspect": ".uk-custom-title, uk-custom-content"
+                }
+            }
         }
     }
 }

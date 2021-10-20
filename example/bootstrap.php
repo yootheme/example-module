@@ -12,6 +12,16 @@ include_once __DIR__ . '/src/Type/MyQueryType.php';
 
 return [
 
+    'theme' => function () {
+        return [
+            'styles' => [
+                'components' => [
+                    'custom' => Path::get('./assets/less/custom.less'),
+                ],
+            ],
+        ];
+    },
+
     'events' => [
 
         // Add asset files
@@ -26,8 +36,8 @@ return [
 
         // Add custom demo source
         'source.init' => [
-            SourceListener::class => 'initSource'
-        ]
+            SourceListener::class => 'initSource',
+        ],
 
     ],
 
@@ -36,8 +46,8 @@ return [
 
         Builder::class => function (Builder $builder) {
             $builder->addTypePath(Path::get('./elements/*/element.json'));
-        }
+        },
 
-    ]
+    ],
 
 ];
