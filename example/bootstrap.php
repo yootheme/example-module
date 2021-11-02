@@ -16,7 +16,7 @@ return [
         return [
             'styles' => [
                 'components' => [
-                    'custom' => Path::get('./assets/less/custom.less'),
+                    'my-component' => Path::get('./assets/less/custom.less'),
                 ],
             ],
         ];

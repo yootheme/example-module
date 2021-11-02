@@ -13,8 +13,8 @@
         },
         "styler": {
             "components": {
-                "custom": {
-                    "name": "Custom Component",
+                "my-component": {
+                    "name": "My Component",
                     "groups": {
                         "title": "@custom-title-*",
                         "content": "@custom-content-*"
