@@ -16,11 +16,11 @@
                 "my-component": {
                     "name": "My Component",
                     "groups": {
-                        "title": "@custom-title-*",
-                        "content": "@custom-content-*"
+                        "title": "@my-component-title-*",
+                        "content": "@my-component-card-*"
                     },
-                    "hover": ".uk-custom",
-                    "inspect": ".uk-custom-title, uk-custom-content"
+                    "hover": "[class*='my-component-']",
+                    "inspect": "[class*='my-component'], [class*='my-component'] > *"
                 }
             }
         }
