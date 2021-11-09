@@ -17,7 +17,7 @@
                     "name": "My Component",
                     "groups": {
                         "title": "@my-component-title-*",
-                        "content": "@my-component-card-*"
+                        "card": "@my-component-card-*"
                     },
                     "hover": "[class*='my-component-']",
                     "inspect": "[class*='my-component'], [class*='my-component'] > *"

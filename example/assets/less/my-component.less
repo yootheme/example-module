@@ -14,6 +14,8 @@
 
 @my-component-title-margin:                         40px;
 
+@my-component-title-color:                          #ddd;
+
 @my-component-title-font-family:                    @global-primary-font-family;
 @my-component-title-font-weight:                    @global-primary-font-weight;
 @my-component-title-text-transform:                 @global-primary-text-transform;
@@ -40,7 +42,6 @@
 
 .my-component-title {
     margin-top: @my-component-title-margin;
-    color: @my-component-title-color;
     .hook-my-component-title;
 }
 
@@ -50,9 +51,15 @@
 }
 
 //
-// Typography
+// Following properties will only be set if they differ from their default value
 //
 
+// Color
+.hook-my-component-title() when not (@my-component-title-color = transparent) {
+    color: @my-component-title-color;
+}
+
+// Typography
 .hook-my-component-title() when not (@my-component-title-font-family = inherit) {
     font-family: @my-component-title-font-family;
 }
@@ -73,10 +80,7 @@
     font-style: @my-component-title-font-style;
 }
 
-//
 // Shadows
-//
-
 .hook-my-component-title() when not (@my-component-title-text-shadow = none) {
     text-shadow: @my-component-title-text-shadow;
 }
@@ -85,10 +89,7 @@
     box-shadow: @my-component-card-box-shadow;
 }
 
-//
 // Border
-//
-
 .hook-my-component-card() when not (@my-component-card-border-width = 0) {
     border@{my-component-card-border-mode}: @my-component-card-border-width solid @my-component-card-border;
 }
@@ -97,10 +98,8 @@
     border-radius: @my-component-card-border-radius;
 }
 
-//
 // Background Gradient
 // Mind, that variables prefixed with `internal` will not show up in the style customizer.
-//
 
 .hook-my-component-card() when not (@internal-my-component-card-gradient = ~'') {
     background-image: @internal-my-component-card-gradient;
