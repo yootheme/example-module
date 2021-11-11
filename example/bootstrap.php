@@ -12,15 +12,13 @@ include_once __DIR__ . '/src/Type/MyQueryType.php';
 
 return [
 
-    'theme' => function () {
-        return [
-            'styles' => [
-                'components' => [
-                    'my-component' => Path::get('./assets/less/my-component.less'),
-                ],
+    'theme' => [
+        'styles' => [
+            'components' => [
+                'my-component' => Path::get('./assets/less/my-component.less'),
             ],
-        ];
-    },
+        ],
+    ],
 
     'events' => [
 
