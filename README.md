@@ -13,9 +13,6 @@ The example modules can be added using a child-theme or a Joomla or WordPress pl
 ```php
 <?php
 
-namespace YOOtheme;
-
-$app = Application::getInstance();
 $app->load(__DIR__ . '/modules/*/bootstrap.php');
 
 return [];
