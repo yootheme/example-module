@@ -2,6 +2,7 @@
 
 use YOOtheme\Builder;
 use YOOtheme\Path;
+use YOOtheme\Theme\Styler\StylerConfig;
 
 include_once __DIR__ . '/src/AssetsListener.php';
 include_once __DIR__ . '/src/SettingsListener.php';
@@ -18,6 +19,10 @@ return [
                 'my-component' => Path::get('./assets/less/my-component.less'),
             ],
         ],
+    ],
+
+    'config' => [
+        StylerConfig::class => __DIR__ . '/config/styler.json',
     ],
 
     'events' => [

@@ -1,0 +1,13 @@
+{
+    "components": {
+        "my-component": {
+            "name": "My Component",
+            "groups": {
+                "title": "@my-component-title-*",
+                "card": "@my-component-card-*"
+            },
+            "hover": "[class*='my-component-']",
+            "inspect": "[class*='my-component'], [class*='my-component'] > *"
+        }
+    }
+}
