@@ -2,10 +2,7 @@
 
 class StyleListener
 {
-    /**
-     * @param array $config
-     */
-    public static function config($config)
+    public static function config(array $config): array
     {
         if (false) {
             // Style needs to be re-compiled
