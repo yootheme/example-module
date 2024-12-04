@@ -5,16 +5,22 @@
     "iconSmall": "${url:images/iconSmall.svg}",
     "element": true,
     "width": 500,
+    "defaults": {},
     "templates": {
         "render": "./templates/template.php",
         "content": "./templates/content.php"
     },
     "placeholder": {
         "props": {
+            "title": "Title",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
     },
     "fields": {
+        "title": {
+            "label": "Title",
+            "source": true
+        },
         "content": {
             "label": "Content",
             "type": "editor",
@@ -37,7 +43,7 @@
         "text_align": "${builder.text_align_justify}",
         "text_align_breakpoint": "${builder.text_align_breakpoint}",
         "text_align_fallback": "${builder.text_align_justify_fallback}",
-        "item_animation": "${builder.animation}",
+        "animation": "${builder.animation}",
         "_parallax_button": "${builder._parallax_button}",
         "visibility": "${builder.visibility}",
         "name": "${builder.name}",
@@ -47,7 +53,7 @@
         "attributes": "${builder.attrs}",
         "css": {
             "label": "CSS",
-            "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>, <code>.el-content</code>",
+            "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>, <code>.el-title</code>, <code>.el-content</code>",
             "type": "editor",
             "editor": "code",
             "mode": "css",
@@ -63,7 +69,39 @@
                 {
                     "title": "Content",
                     "fields": [
+                        "title",
                         "content"
+                    ]
+                },
+                {
+                    "title": "Settings",
+                    "fields": [
+                        {
+                            "label": "General",
+                            "type": "group",
+                            "fields": [
+                                "position",
+                                "position_left",
+                                "position_right",
+                                "position_top",
+                                "position_bottom",
+                                "position_z_index",
+                                "margin",
+                                "margin_remove_top",
+                                "margin_remove_bottom",
+                                "maxwidth",
+                                "maxwidth_breakpoint",
+                                "block_align",
+                                "block_align_breakpoint",
+                                "block_align_fallback",
+                                "text_align",
+                                "text_align_breakpoint",
+                                "text_align_fallback",
+                                "animation",
+                                "_parallax_button",
+                                "visibility"
+                            ]
+                        }
                     ]
                 },
                 "${builder.advanced}"

@@ -1,14 +1,33 @@
 <?php
 
-// Element
-$el = $this->el('div');
+$el = $this->el('div', [
+    'class' => '',
+]);
+
+// Title
+$title = $this->el('h1', [
+    'class' => [
+        'el-title'
+    ],
+]);
+
+// Content
+$content = $this->el('div', [
+    'class' => [
+        'el-content'
+    ],
+]);
 
 ?>
 
 <?= $el($props, $attrs) ?>
 
-    <?php if ($props['content'] != '') : ?>
-        <?= $props['content'] ?>
-    <?php endif ?>
+    <?php if ($props['title']): ?>
+    <?= $title($props, $props['title']) ?>
+    <?php endif; ?>
+
+    <?php if ($props['content']): ?>
+    <?= $content($props, $props['content']) ?>
+    <?php endif; ?>
 
 <?= $el->end() ?>
