@@ -1,5 +1,7 @@
 <?php
 
+// namespace
+
 use YOOtheme\Builder;
 use YOOtheme\Path;
 use YOOtheme\Theme\Styler\StylerConfig;
@@ -11,6 +13,7 @@ include_once __DIR__ . '/src/StyleListener.php';
 include_once __DIR__ . '/src/MyTypeProvider.php';
 include_once __DIR__ . '/src/Type/MyType.php';
 include_once __DIR__ . '/src/Type/MyQueryType.php';
+include_once __DIR__ . '/src/TranslationListener.php';
 
 return [
 
@@ -46,6 +49,11 @@ return [
         // Add styler config listener
         StylerConfig::class => [
             StyleListener::class => 'config'
+        ],
+
+        // Add translation
+        'customizer.init' => [
+            TranslationListener::class => ['initCustomizer', -10],
         ],
 
     ],
