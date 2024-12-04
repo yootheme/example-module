@@ -1,5 +1,7 @@
 <?php
 
+// namespace
+
 use YOOtheme\Config;
 use YOOtheme\Path;
 

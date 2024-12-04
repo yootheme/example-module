@@ -1,5 +1,7 @@
 <?php
 
+// namespace
+
 use YOOtheme\Theme\Styler\StylerConfig;
 
 /**

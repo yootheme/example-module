@@ -1,5 +1,7 @@
 <?php
 
+// namespace
+
 /**
  * Custom Type
  *
