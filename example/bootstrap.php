@@ -56,7 +56,6 @@ return [
         Builder::class => function (Builder $builder) {
             $builder->addTypePath(Path::get('./elements/*/element.json'));
         },
-
     ],
 
 ];

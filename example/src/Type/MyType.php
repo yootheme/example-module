@@ -1,30 +1,31 @@
 <?php
 
+/**
+ * Custom Type
+ *
+ * @see https://yootheme.com/support/yootheme-pro/joomla/developers-sources#add-custom-sources
+ */
 class MyType
 {
     public static function config()
     {
         return [
-
             'fields' => [
-
                 'my_field' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'My Field'
+                        'label' => 'My Field',
                     ],
                     'extensions' => [
-                        'call' => __CLASS__ . '::resolve'
-                    ]
-                ]
-
+                        'call' => __CLASS__ . '::resolve',
+                    ],
+                ],
             ],
 
             'metadata' => [
                 'type' => true,
-                'label' => 'My Type'
-            ]
-
+                'label' => 'My Type',
+            ],
         ];
     }
 

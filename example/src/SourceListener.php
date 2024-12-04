@@ -2,6 +2,11 @@
 
 use YOOtheme\Builder\Source;
 
+/**
+ * Source listener.
+ *
+ * @see https://yootheme.com/support/yootheme-pro/joomla/developers-sources#add-custom-sources
+ */
 class SourceListener
 {
     /**
