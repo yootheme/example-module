@@ -37,8 +37,10 @@ return [
         ],
 
         // Add settings Panels
+        // Add translation
         'customizer.init' => [
             SettingsListener::class => 'initCustomizer',
+            TranslationListener::class => ['initCustomizer', -10],
         ],
 
         // Add custom demo source
@@ -49,11 +51,6 @@ return [
         // Add styler config listener
         StylerConfig::class => [
             StyleListener::class => 'config'
-        ],
-
-        // Add translation
-        'customizer.init' => [
-            TranslationListener::class => ['initCustomizer', -10],
         ],
 
     ],
